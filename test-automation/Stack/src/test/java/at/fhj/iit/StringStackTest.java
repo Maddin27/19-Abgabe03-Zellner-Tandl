@@ -39,7 +39,7 @@ public class StringStackTest
     public void testIsNotEmpty() throws Exception
     {
     	if(!s.isEmpty()) {
-    		Assert.assertTrue(true);
+    		Assert.assertFalse(true);
     	}
     }
 
@@ -58,7 +58,7 @@ public class StringStackTest
     {
     	s.push("AMK");
     	s.pop();
-    	testIsEmpty();
+    	s.isEmpty();
     }
     
     /**
