@@ -57,7 +57,7 @@ public class StringStackTest
     public void testPushPop() throws Exception
     {
     	s.push("AMK");
-//    	s.pop();
+    	s.pop();
     	testIsEmpty();
     }
     
