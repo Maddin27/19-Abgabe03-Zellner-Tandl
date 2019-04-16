@@ -2,6 +2,8 @@ package at.fhj.iit;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.Assert;
+import org.junit.Assert.*;
 
 public class StringStackTest
 {
@@ -22,6 +24,9 @@ public class StringStackTest
     @Test
     public void testIsEmpty() throws Exception
     {
+    	if(s.isEmpty()) {
+    		Assert.assertTrue(true);
+    	}
     }
     
     /**
@@ -33,6 +38,9 @@ public class StringStackTest
     @Test
     public void testIsNotEmpty() throws Exception
     {
+    	if(!s.isEmpty()) {
+    		Assert.assertTrue(true);
+    	}
     }
 
     /**
@@ -48,6 +56,9 @@ public class StringStackTest
     @Test
     public void testPushPop() throws Exception
     {
+    	s.push("AMK");
+//    	s.pop();
+    	testIsEmpty();
     }
     
     /**
