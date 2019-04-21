@@ -61,13 +61,28 @@ public class StringStackTest
     	s.isEmpty();
     }
     
-//    Tests to pop empty Stack    
+//    Tests if Stack pops from top to bottom  
     @Test
-    public void popEmpty() throws Exception
+    public void popOrder() throws Exception
     {
     	s.push("Word1");
     	s.push("Word2");
     	Assert.assertEquals("Word2", s.pop());
+    }
+    
+//  Checks if pushed strings get lost in a stack with multiple strings
+    @Test
+    public void dataLoss() throws Exception
+    {
+    	for(int i = 0; i < 5; i++) {
+    		s.push("String");
+    	}
+    	int count = 0;
+    	while(s.isEmpty() == false) {
+    		s.pop();
+    		count++;
+    	}
+    	Assert.assertEquals(5, count);
     }
     /**
      * Feel Free to insert other test cases for the String Stack Implementation !!!
