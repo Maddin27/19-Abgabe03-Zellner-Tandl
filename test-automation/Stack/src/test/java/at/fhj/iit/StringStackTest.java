@@ -61,6 +61,14 @@ public class StringStackTest
     	s.isEmpty();
     }
     
+//    Tests to pop empty Stack    
+    @Test
+    public void popEmpty() throws Exception
+    {
+    	s.push("Word1");
+    	s.push("Word2");
+    	Assert.assertEquals("Word2", s.pop());
+    }
     /**
      * Feel Free to insert other test cases for the String Stack Implementation !!!
      */
